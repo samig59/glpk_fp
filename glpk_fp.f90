@@ -1,5 +1,5 @@
 ! glpk_fp.f90
-! based on glpk.h (version as given by the constants below)
+! based on glpk.h (version as given by the VERSION constants below)
 !
 !---------------------------------------------------------------------------------!
 ! glpk_fp.f90 and glpk_f.f90 are differentiated only with respect of the treatment!
@@ -25,8 +25,8 @@
 !
 !  For further details, see <http://www.gnu.org/licenses/>.
 !**********************************************************************************
-! $Revision: 1.4 $
-! Last modified: $Date: 2013/09/30 21:52:01 $
+! $Revision: 1.5 $
+! Last modified: $Date: 2013/09/30 22:02:11 $
 ! Last compiled with: 
 !      gfortran 4.6.3                                   (Date: 27/09/2013)
 !      ifort 12.0.0 20101116                            (Date: 01/10/2013)
