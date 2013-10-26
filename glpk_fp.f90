@@ -1776,33 +1776,3 @@ MODULE glpk_fp
 
 END MODULE glpk_fp
 
-!
-
-! Below is the start and and of Miscellaneous API Routines which have not yet been included ....
-! /**********************************************************************/
-
-! #ifndef GLP_LONG_DEFINED
-! #define GLP_LONG_DEFINED
-! typedef struct { int lo, hi; } glp_long;
-! /* long integer data type */
-! #ENDif
-
-! int glp_init_env(void);
-! /* initialize GLPK environment */
-
-! const char *glp_version(void);
-! /* determine library version */
-
-! int glp_free_env(void);
-! /* free GLPK environment */
-
-!:
-!:
-!:
-
-
-! int glp_wclique_exact(glp_graph *G, int v_wgt, double *sol, int v_set);
-! /* find maximum weight clique with exact algorithm */
-
-! /****************************************************************************
-
