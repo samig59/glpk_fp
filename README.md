@@ -3,14 +3,16 @@ Fortran Interface to Glpk's API
 
 A Fortran Glpk API  is provided in three Fortran modules:
 
-  * glpk_fp.f90    : provides access to Glpk's LP and (M)IP procedures
+  * glpk_fp.f90    : provides access to Glpk's LP and (M)IP procedures.
 
   * glpk_graph.f90 : provides access to (some of) Glpk's graph and
-    network procedures
+    network procedures.
 
   * glpk_utils.f90 : provides access to (some of) Glpk's utility
-    procedures
+    procedures.
 
+The Fortran API is based on the standrad intrinsic module
+ISO_C_BINDING which defines the Fortran and C interoperability.
 
 The split of the API is on purpose. The development is at a very early
 stage. However, in the case of LP and (M)IP the functionality is
