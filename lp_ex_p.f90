@@ -24,13 +24,7 @@
 !      gfortran 4.8.1 20130411                         Date: 26/09/2013
 !
 !----------------------------------------------------------------!
-! Compiles but dumps core when executed with                     !
-!      G95 (GCC 4.0.3 (g95 0.94!) Jan 17 2013)                   !
-!                                                                !
-! glp_set_prob_name: problem name contains invalid character(s)  !
-! Error detected in file glpapi01.c at line 140                  !
-! Aborted (core dumped)                                          !
-!----------------------------------------------------------------!
+!
 
 PROGRAM lp_ex_p
   USE, INTRINSIC :: ISO_C_BINDING, ONLY: C_INT, C_DOUBLE, C_NULL_CHAR, C_PTR
