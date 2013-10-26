@@ -24,9 +24,9 @@ Examples:
 
   * bp_ex_p.f90    : Solves an IP (actually BP) problem
 
-  * model_ex_p.f90 : demostrates the read in of Gnu MPL model, creation, and 
+  * model_ex_p.f90 : Demostrates the read in of Gnu MPL model, creation, and 
                      solution of the problem, and the export in glpk MPS format.
-                     The Gnum MPL model file "assign.mod" is needed in order
+                     The Gnu MPL model file "assign.mod" is needed in order
                      to test this example.
 
 
