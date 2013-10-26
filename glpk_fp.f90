@@ -25,8 +25,8 @@
 !
 !  For further details, see <http://www.gnu.org/licenses/>.
 !**********************************************************************************
-! $Revision: 1.5 $
-! Last modified: $Date: 2013/09/30 22:02:11 $
+! $Revision: 1.7 $
+! Last modified: $Date: 2013/10/26 16:13:10 $
 ! Last compiled with: 
 !      gfortran 4.6.3                                   (Date: 27/09/2013)
 !      ifort 12.0.0 20101116                            (Date: 01/10/2013)
@@ -1290,6 +1290,7 @@ MODULE glpk_fp
           USE, INTRINSIC :: ISO_C_BINDING, ONLY: C_PTR
           IMPORT :: glp_bfcp
           TYPE(C_PTR), VALUE :: prob
+          TYPE(glp_bfcp) :: parm
         END SUBROUTINE glp_set_bfcp
 
 ! /* retrieve the basis header information */
@@ -1705,8 +1706,8 @@ MODULE glpk_fp
 
 ! /* allocate the MathProg translator workspace */
 
-          INTEGER(C_INT) FUNCTION glp_mpl_alloc_wksp() BIND(C, NAME="glp_mpl_alloc_wksp")
-            USE, INTRINSIC :: ISO_C_BINDING, ONLY: C_INT
+          TYPE(C_PTR) FUNCTION glp_mpl_alloc_wksp() BIND(C, NAME="glp_mpl_alloc_wksp")
+            USE, INTRINSIC :: ISO_C_BINDING, ONLY: C_PTR
           END FUNCTION glp_mpl_alloc_wksp
 
 ! /* read and translate model section */
