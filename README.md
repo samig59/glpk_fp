@@ -35,11 +35,11 @@ How to compile and run the examles:
   1. Compile the glpk_fp.f90 module:
      $gfortran -c glpk_fp.f90
 
-  2. Compile the example, for instance, model_ex_p.f90
+  2. Compile the example, for instance, model_ex_p.f90:
      $gfortran -c model_ex_p.f90
 
-  3. Create the executable, for instance, model_ex_p
+  3. Create the executable, for instance, model_ex_p:
      $gfortran -o model_ex_p model_ex_p.f90 glpk_fp.o -lglpk -lm
 
-  4. Run the executable, for instance, model_ex_p
+  4. Run the executable, for instance, model_ex_p:
      $./model_ex_p
