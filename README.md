@@ -29,6 +29,10 @@ Examples:
                      The Gnu MPL model file "assign.mod" is needed in order
                      to test this example.
 
+  * graph_ex.f90   : Demonstrates the dimensioning and creation of a graph.
+                     It applies a weakly connected component search.
+                     It uses the module glpk_graph.f90 to achieve these tasks.
+
 
 How to compile and run the examles:
 
