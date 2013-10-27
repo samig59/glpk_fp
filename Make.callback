@@ -1,0 +1,22 @@
+FC = gfortran
+
+.SUFFIXES:
+.SUFFIXES: .f90 .o
+
+objects = bp_callback_ex.o cb_prob_common.o cb_proc.o glpk_fp.o
+
+bp_callb : $(objects)
+	 $(FC) -o bp_callb $(objects) -lglpk -lm
+
+glpk_fp.o : glpk_fp.f90
+	$(FC) -c glpk_fp.f90
+cb_prob_common.o : cb_prob_common.f90
+	$(FC) -c cb_prob_common.f90
+cb_proc.o : glpk_fp.o cb_prob_common.o cb_proc.f90
+	$(FC) -c cb_proc.f90
+bp_callback_ex.o : glpk_fp.o cb_prob_common.o cb_proc.o bp_callback_ex.f90
+	$(FC) -c bp_callback_ex.f90
+
+.PHONY: clean
+clean:
+	-rm $(objects) glpk_fp.mod cb_prob_common.mod bp_callb

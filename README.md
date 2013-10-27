@@ -59,3 +59,8 @@ How to compile and run the examles:
 
   4. Run the executable, for instance, model_ex_p:
      $./model_ex_p
+
+Alternatively you may wish to run the included make files. For
+instance, in order to test the call-back example, run
+
+   $make -f Make.callback

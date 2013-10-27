@@ -1,0 +1,21 @@
+FC = gfortran
+
+.SUFFIXES:
+.SUFFIXES: .f90 .o
+
+objects = bp_ex.o glpk_fp.o
+
+binary : $(objects)
+	$(FC) -o binary $(objects) -lglpk -lm
+
+glpk_fp.o : glpk_fp.f90
+	$(FC) -c glpk_fp.f90
+bp_ex.o : glpk_fp.o bp_ex.f90
+	$(FC) -c bp_ex.f90
+
+.PHONY: clean
+clean:
+	-rm $(objects) glpk_fp.mod binary
+
+
+

@@ -1,0 +1,21 @@
+FC = gfortran
+
+.SUFFIXES:
+.SUFFIXES: .f90 .o
+
+objects = model_ex.o glpk_fp.o
+
+model : $(objects)
+	$(FC) -o model $(objects) -lglpk -lm
+
+glpk_fp.o : glpk_fp.f90
+	$(FC) -c glpk_fp.f90
+model_ex.o : glpk_fp.o model_ex.f90
+	$(FC) -c model_ex.f90
+
+.PHONY: clean
+clean:
+	-rm $(objects) glpk_fp.mod model
+
+
+

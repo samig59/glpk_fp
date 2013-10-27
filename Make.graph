@@ -1,0 +1,21 @@
+FC = gfortran
+
+.SUFFIXES:
+.SUFFIXES: .f90 .o
+
+objects = graph_ex.o glpk_graph.o
+
+graph : $(objects)
+	$(FC) -o graph $(objects) -lglpk -lm
+
+glpk_graph.o : glpk_graph.f90
+	$(FC) -c glpk_graph.f90
+graph_ex.o : glpk_graph.o graph_ex.f90
+	$(FC) -c graph_ex.f90
+
+.PHONY: clean
+clean:
+	-rm $(objects) glpk_graph.mod graph
+
+
+
