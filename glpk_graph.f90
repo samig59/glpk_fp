@@ -28,8 +28,8 @@
 !  For further details, see the license that follwed with glpk and also
 !  visit <http://www.gnu.org/licenses/>.
 !**********************************************************************************
-! $Revision: 1.3 $
-! Last modified: $Date: 2013/10/04 14:09:44 $
+! $Revision: 1.4 $
+! Last modified: $Date: 2013/10/05 09:05:06 $
 ! Last compiled with: 
 !      gfortran 4.6.3                                   (Date: --/--/----)
 !      ifort 12.0.0 20101116                            (Date: 05/10/2013)
@@ -57,7 +57,7 @@ MODULE glpk_graph
 
   ! Glpk graph structures 
 
-  TYPE glp_vertex         ! glp_vertex & _glp_vertex
+  TYPE, BIND(C) :: glp_vertex         ! glp_vertex & _glp_vertex
      INTEGER(C_INT) :: i
      TYPE(C_PTR) :: name  ! char *name; /* CHARACTER(C_CHAR), POINTER :: name(:) */
      TYPE(C_PTR) :: entry ! void *entry;
@@ -67,7 +67,7 @@ MODULE glpk_graph
      TYPE(C_PTR) :: out   ! glp_arc *out;
   END type glp_vertex
 
-  TYPE glp_arc             ! glp_arc & _glp_arc
+  TYPE, BIND(C) :: glp_arc             ! glp_arc & _glp_arc
      TYPE(C_PTR) :: tail   !glp_vertex *tail;
      TYPE(C_PTR) :: head   !glp_vertex *head;
      TYPE(C_PTR) :: data   ! void *data;
@@ -78,7 +78,7 @@ MODULE glpk_graph
      TYPE(C_PTR) :: h_next ! glp_arc *h_next;
   END type glp_arc
 
-  TYPE glp_graph          ! glp_graph & _glp_graph
+  TYPE, BIND(C) :: glp_graph          ! glp_graph & _glp_graph
      TYPE(C_PTR) :: pool  ! void *pool;
      TYPE(C_PTR) :: name  ! char *name; /* CHARACTER(C_CHAR), POINTER :: name(:) */
      INTEGER(C_INT) :: nv_max
