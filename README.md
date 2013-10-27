@@ -33,7 +33,18 @@ Examples:
                      It applies a weakly connected component search.
                      It uses the module glpk_graph.f90 to achieve these tasks.
 
-
+  * bp_callback_ex.f90, cb_prob_common.f90,  cb_proc.f90 : Skeleton for and
+                     demonstration of the use of call-back procedure by the
+                     (mixed) integer programming branch-and-cut solver.
+                     (i) bp_callback_ex.f90 is the main program. It sets up
+                         a binary problem and calls the glpk solver.
+                    (ii) cb_prob_common.f90 is a module that ellows the main
+                         program the the call-back procedure to communicate.
+                   (iii) cb_proc.f90 is a skelleton and an example of a 
+                         call-back procedure. In this example, it passes a
+                         feasible solution to the solver. As it turns out this
+                         is the optimal one.
+                         
 How to compile and run the examles:
 
   1. Compile the glpk_fp.f90 module:
