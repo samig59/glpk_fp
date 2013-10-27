@@ -30,7 +30,8 @@ Examples:
                      to test this example.
 
   * graph_ex.f90   : Demonstrates the dimensioning and creation of a graph.
-                     It applies a weakly connected component search.
+                     It applies a weakly connected component search as
+                     well as a strongly connected component search.
                      It uses the module glpk_graph.f90 to achieve these tasks.
 
   * bp_callback_ex.f90, cb_prob_common.f90,  cb_proc.f90 : Skeleton for and
