@@ -39,8 +39,8 @@ Examples:
                      (mixed) integer programming branch-and-cut solver.
                      (i) bp_callback_ex.f90 is the main program. It sets up
                          a binary problem and calls the glpk solver.
-                    (ii) cb_prob_common.f90 is a module that ellows the main
-                         program the the call-back procedure to communicate.
+                    (ii) cb_prob_common.f90 is a module that allows the main
+                         program and the the call-back procedure to communicate.
                    (iii) cb_proc.f90 is a skelleton and an example of a 
                          call-back procedure. In this example, it passes a
                          feasible solution to the solver. As it turns out this
