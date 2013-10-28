@@ -40,31 +40,31 @@ callback : $(OBJCB) $(OBJCC) $(OBJCF) $(OBJFP)
 	$(FC) -o callback  $(OBJCB) $(OBJCC) $(OBJCF) $(OBJFP) $(LDFLAGS)
 
 $(OBJFP) : glpk_fp.f90
-	$(FC) -c glpk_fp.f90
+	$(FC) -c $*.f90
 
 $(OBJGR) : glpk_graph.f90
-	$(FC) -c glpk_graph.f90
+	$(FC) -c $*.f90
 
 $(OBJLP) : $(OBJFP) lp_ex_p.f90
-	$(FC) -c lp_ex_p.f90
+	$(FC) -c $*.f90
 
 $(OBJMD) : $(OBJFP) model_ex.f90 
-	$(FC) -c model_ex.f90
+	$(FC) -c $*.f90
 
 $(OBJBN) : $(OBJFP) bp_ex.f90
-	$(FC) -c bp_ex.f90
+	$(FC) -c $*.f90
 
 $(OBJNT) : $(OBJGR) graph_ex.f90
-	$(FC) -c graph_ex.f90
+	$(FC) -c $*.f90
 
 $(OBJCC) : cb_prob_common.f90
-	$(FC) -c cb_prob_common.f90
+	$(FC) -c $*.f90
 
 $(OBJCF) : $(OBJFP) $(OBJCC) cb_proc.f90
-	$(FC) -c cb_proc.f90
+	$(FC) -c $*.f90
 
 $(OBJCB) : $(OBJFP) $(OBJCC) $(OBJCF) bp_callback_ex.f90
-	$(FC) -c bp_callback_ex.f90
+	$(FC) -c $*.f90
 
 .PHONY: cleanall
 cleanall:
