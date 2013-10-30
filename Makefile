@@ -11,7 +11,7 @@ MODULES := $(wildcard *.mod)
 
 OBJLP = lp_ex_p.o
 OBJMD = model_ex.o
-OBJBN = bp_ex.o
+OBJBN = bp_ex_p.o
 OBJNT = graph_ex.o
 OBJCB = bp_callback_ex.o
 OBJCC = cb_prob_common.o
@@ -51,7 +51,7 @@ $(OBJLP) : $(OBJFP) lp_ex_p.f90
 $(OBJMD) : $(OBJFP) model_ex.f90 
 	$(FC) -c $*.f90
 
-$(OBJBN) : $(OBJFP) bp_ex.f90
+$(OBJBN) : $(OBJFP) bp_ex_p.f90
 	$(FC) -c $*.f90
 
 $(OBJNT) : $(OBJGR) graph_ex.f90
