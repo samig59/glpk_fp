@@ -48,7 +48,7 @@ Examples:
                          
 How to compile and run the examles:
 
-  1. Compile the glpk_fp.f90 module:
+  1. Compile the needed module(s), for instance, the glpk_fp.f90 module:
      $gfortran -c glpk_fp.f90
 
   2. Compile the example, for instance, model_ex_p.f90:
