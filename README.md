@@ -55,7 +55,7 @@ How to compile and run the examles:
      $gfortran -c model_ex_p.f90
 
   3. Create the executable, for instance, model_ex_p:
-     $gfortran -o model_ex_p model_ex_p.f90 glpk_fp.o -lglpk -lm
+     $gfortran -o model_ex_p model_ex_p.o glpk_fp.o -lglpk -lm
 
   4. Run the executable, for instance, model_ex_p:
      $./model_ex_p
